@@ -1,0 +1,10 @@
+{% extends 'cliente/base.html' %}
+{% block content %}
+<h2>Borrar Venta</h2>
+<p>¿Estás seguro de que quieres borrar la venta con folio <strong>{{ venta.folio }}</strong>?</p>
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger"><i class="bi bi-trash"></i> Borrar</button>
+    <a href="{% url 'ver_ventas' %}" class="btn btn-secondary"><i class="bi bi-arrow-left"></i> Cancelar</a>
+</form>
+{% endblock %}

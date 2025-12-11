@@ -1,0 +1,86 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Sistema de Administración</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'inicio' %}">Inicio</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Clientes
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{% url 'agregar_cliente' %}">Agregar Cliente</a>
+            <a class="dropdown-item" href="{% url 'ver_clientes' %}">Ver Clientes</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="empleadosDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Empleados
+          </a>
+          <div class="dropdown-menu" aria-labelledby="empleadosDropdown">
+            <a class="dropdown-item" href="{% url 'agregar_empleado' %}">Agregar Empleado</a>
+            <a class="dropdown-item" href="{% url 'ver_empleados' %}">Ver Empleados</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="ventasDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Ventas
+          </a>
+          <div class="dropdown-menu" aria-labelledby="ventasDropdown">
+            <a class="dropdown-item" href="{% url 'agregar_venta' %}">Agregar Venta</a>
+            <a class="dropdown-item" href="{% url 'ver_ventas' %}">Ver Ventas</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="sucursalesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sucursales
+          </a>
+          <div class="dropdown-menu" aria-labelledby="sucursalesDropdown">
+            <a class="dropdown-item" href="{% url 'agregar_sucursal' %}">Agregar Sucursal</a>
+            <a class="dropdown-item" href="{% url 'ver_sucursales' %}">Ver Sucursales</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="proveedoresDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Proveedores
+          </a>
+          <div class="dropdown-menu" aria-labelledby="proveedoresDropdown">
+            <a class="dropdown-item" href="{% url 'agregar_proveedor' %}">Agregar Proveedor</a>
+            <a class="dropdown-item" href="{% url 'ver_proveedores' %}">Ver Proveedores</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Categorías
+          </a>
+          <div class="dropdown-menu" aria-labelledby="categoriasDropdown">
+            <a class="dropdown-item" href="{% url 'agregar_categoria' %}">Agregar Categoría</a>
+            <a class="dropdown-item" href="{% url 'ver_categorias' %}">Ver Categorías</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="videojuegosDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Videojuegos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="videojuegosDropdown">
+            <a class="dropdown-item" href="{% url 'agregar_videojuego' %}">Agregar Videojuego</a>
+            <a class="dropdown-item" href="{% url 'ver_videojuegos' %}">Ver Videojuegos</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="inventariosDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Inventarios
+          </a>
+          <div class="dropdown-menu" aria-labelledby="inventariosDropdown">
+            <a class="dropdown-item" href="{% url 'agregar_inventario' %}">Agregar Inventario</a>
+            <a class="dropdown-item" href="{% url 'ver_inventarios' %}">Ver Inventarios</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  

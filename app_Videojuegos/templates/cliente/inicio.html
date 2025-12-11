@@ -1,0 +1,39 @@
+{% extends 'cliente/base.html' %}
+{% block content %}
+    <div class="text-center">
+        <h1>Bienvenido al Sistema de Administración</h1>
+        <p>Gestión básica de Clientes, Empleados y Ventas (Cliente: CRUD; Empleado/Venta: modelos y relaciones).</p>
+        <div class="mt-4">
+            <a href="{% url 'ver_clientes' %}" class="btn btn-primary btn-lg"><i class="bi bi-list"></i> Ver Clientes</a>
+            <a href="{% url 'agregar_cliente' %}" class="btn btn-success btn-lg"><i class="bi bi-person-plus"></i> Agregar Cliente</a>
+            <br>
+            <br>
+            <a href="{% url 'ver_empleados' %}" class="btn btn-primary btn-lg"><i class="bi bi-list"></i> Ver Empleado</a>
+            <a href="{% url 'agregar_empleado' %}" class="btn btn-success btn-lg"><i class="bi bi-person-plus"></i> Agregar Empleado</a>
+            <br>
+            <br>
+            <a href="{% url 'ver_ventas' %}" class="btn btn-primary btn-lg"><i class="bi bi-list"></i> Ver Venta</a>
+            <a href="{% url 'agregar_venta' %}" class="btn btn-success btn-lg"><i class="bi bi-person-plus"></i> Agregar Venta</a>
+            <br>
+            <br>
+            <a href="{% url 'ver_sucursales' %}" class="btn btn-primary btn-lg"><i class="bi bi-building"></i> Ver Sucursales</a>
+            <a href="{% url 'agregar_sucursal' %}" class="btn btn-success btn-lg"><i class="bi bi-building"></i> Agregar Sucursal</a>
+            <br>
+            <br>
+            <a href="{% url 'ver_proveedores' %}" class="btn btn-primary btn-lg"><i class="bi bi-person-plus"></i> Ver Proveedores</a>
+            <a href="{% url 'agregar_proveedor' %}" class="btn btn-success btn-lg"><i class="bi bi-person-plus"></i> Agregar Proveedor</a>
+            <br>
+            <br>
+            <a href="{% url 'ver_categorias' %}" class="btn btn-primary btn-lg"><i class="bi bi-tag"></i> Ver Categorías</a>
+            <a href="{% url 'agregar_categoria' %}" class="btn btn-success btn-lg"><i class="bi bi-tag"></i> Agregar Categoría</a>
+            <br>
+            <br>
+            <a href="{% url 'ver_videojuegos' %}" class="btn btn-primary btn-lg"><i class="bi bi-controller"></i> Ver Videojuegos</a>
+            <a href="{% url 'agregar_videojuego' %}" class="btn btn-success btn-lg"><i class="bi bi-controller"></i> Agregar Videojuego</a>
+            <br>
+            <br>
+            <a href="{% url 'ver_inventarios' %}" class="btn btn-primary btn-lg"><i class="bi bi-box"></i> Ver Inventarios</a>
+            <a href="{% url 'agregar_inventario' %}" class="btn btn-success btn-lg"><i class="bi bi-box"></i> Agregar Inventario</a>
+        </div>
+    </div>
+{% endblock %}

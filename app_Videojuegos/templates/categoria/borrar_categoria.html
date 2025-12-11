@@ -1,0 +1,10 @@
+{% extends 'cliente/base.html' %}
+{% block content %}
+<h2>Borrar Categoría</h2>
+<p>¿Estás seguro de que quieres borrar la categoría "{{ categoria.nombre }}"?</p>
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger"><i class="bi bi-trash"></i> Borrar</button>
+    <a href="{% url 'ver_categorias' %}" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}

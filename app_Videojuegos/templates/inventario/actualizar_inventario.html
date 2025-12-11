@@ -1,0 +1,47 @@
+{% extends 'cliente/base.html' %}
+{% block content %}
+<h2>Actualizar Inventario</h2>
+<form method="POST">
+    {% csrf_token %}
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="id_videojuego">Videojuego</label>
+            <select name="id_videojuego" id="id_videojuego" class="form-control" required>
+                <option value="">-- Seleccionar Videojuego --</option>
+                {% for vj in videojuegos %}
+                <option value="{{ vj.id }}" {% if vj.id == inventario.videojuego.id %}selected{% endif %}>{{ vj.nombre }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="id_direccion">Sucursal</label>
+            <select name="id_direccion" id="id_direccion" class="form-control" required>
+                <option value="">-- Seleccionar Sucursal --</option>
+                {% for suc in sucursales %}
+                <option value="{{ suc.id }}" {% if suc.id == inventario.sucursal.id %}selected{% endif %}>{{ suc.direccion }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="nombre_juego">Nombre del Juego</label>
+            <input type="text" class="form-control" id="nombre_juego" name="nombre_juego" value="{{ inventario.nombre_juego }}" required>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="plataforma">Plataforma</label>
+            <input type="text" class="form-control" id="plataforma" name="plataforma" value="{{ inventario.plataforma }}" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="proveedor">Proveedor</label>
+        <select name="proveedor" id="proveedor" class="form-control" required>
+            <option value="">-- Seleccionar Proveedor --</option>
+            {% for prov in proveedores %}
+            <option value="{{ prov.id }}" {% if prov.id == inventario.proveedor.id %}selected{% endif %}>{{ prov.nombre }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary"><i class="bi bi-pencil"></i> Actualizar Inventario</button>
+</form>
+{% endblock %}
